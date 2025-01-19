@@ -1,1 +1,38 @@
-node_modules
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Local environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE/Editor settings
+.vscode/
+.idea/
+*.iml
+
+# Testing
+/coverage/
+
+# Package-locks
+package-lock.json
+yarn.lock
+
+# Miscellaneous
+*.log
+*.swp
