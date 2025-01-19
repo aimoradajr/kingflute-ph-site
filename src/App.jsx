@@ -172,7 +172,7 @@ function App() {
           "Environmentally friendly",
         ],
       },
-    }
+    },
   ];
 
   const reviews = [
@@ -321,7 +321,11 @@ function App() {
       {/* Hero Section */}
       <section
         className="relative bg-cover bg-center h-96 text-white"
-        style={{ backgroundImage: "url('/assets/bamboo-forest1.png')" }}
+        style={{
+          backgroundImage: `url(${
+            import.meta.env.BASE_URL
+          }assets/bamboo-forest1.png)`,
+        }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
           <div className="text-center px-4">
@@ -458,7 +462,9 @@ function App() {
                     </button>
                     <div className="absolute inset-0 bg-stone-200 h-80">
                       <img
-                        src={`${import.meta.env.BASE_URL}${selectedProduct.images[currentImageIndex]}`}
+                        src={`${import.meta.env.BASE_URL}${
+                          selectedProduct.images[currentImageIndex]
+                        }`}
                         alt={`${selectedProduct.name} view ${
                           currentImageIndex + 1
                         }`}
@@ -594,7 +600,9 @@ function App() {
                     className="w-12 h-12 rounded-full object-cover"
                   />
                   <div>
-                    <h3 className="font-semibold text-gray-800">{review.name}</h3>
+                    <h3 className="font-semibold text-gray-800">
+                      {review.name}
+                    </h3>
                     <p className="text-sm text-gray-500">{review.date}</p>
                   </div>
                 </div>
@@ -620,7 +628,9 @@ function App() {
                 </div>
 
                 {/* Review Comment */}
-                <p className="text-gray-600 mb-4 px-6 text-sm">{review.comment}</p>
+                <p className="text-gray-600 mb-4 px-6 text-sm">
+                  {review.comment}
+                </p>
 
                 {/* Purchased Product */}
                 <div className="flex items-center space-x-4 px-6 pb-6">
@@ -662,8 +672,8 @@ function App() {
             />
             <div className="absolute inset-0 bg-black/20 flex items-end justify-center">
               <p className="text-white px-4 py-4 text-center">
-                Teaching students in rural areas how to play the bamboo flute and
-                fostering a love for music.
+                Teaching students in rural areas how to play the bamboo flute
+                and fostering a love for music.
               </p>
             </div>
           </div>
@@ -677,8 +687,8 @@ function App() {
             />
             <div className="absolute inset-0 bg-black/20 flex items-end justify-center">
               <p className="text-white px-4 py-4 text-center">
-                Conducting free bamboo flute workshops to empower communities and
-                promote music education.
+                Conducting free bamboo flute workshops to empower communities
+                and promote music education.
               </p>
             </div>
           </div>
@@ -692,8 +702,8 @@ function App() {
             />
             <div className="absolute inset-0 bg-black/20 flex items-end justify-center">
               <p className="text-white px-4 py-4 text-center">
-                Partnering with schools to provide free instruments and lessons to
-                underprivileged youth.
+                Partnering with schools to provide free instruments and lessons
+                to underprivileged youth.
               </p>
             </div>
           </div>
@@ -702,7 +712,7 @@ function App() {
 
       {/* divider */}
       <div className="border-t border-gray-200 mt-6"></div>
-      
+
       {/* Company */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-6">
@@ -714,7 +724,9 @@ function App() {
             {/* Office Photo */}
             <div className="">
               <img
-              src={`${import.meta.env.BASE_URL}assets/company/company-craftsmen.png`}
+                src={`${
+                  import.meta.env.BASE_URL
+                }assets/company/company-craftsmen.png`}
                 alt="Office"
                 className="w-full h-40 object-cover rounded-lg shadow"
               />
@@ -723,14 +735,17 @@ function App() {
 
           {/* Company Info */}
           <div className="text-center max-w-xl mx-auto">
-            <h3 className="text-2xl font-semibold text-gray-800">Queenflute Philippines Inc. Since 1981</h3>
+            <h3 className="text-2xl font-semibold text-gray-800">
+              Queenflute Philippines Inc. Since 1981
+            </h3>
             <p className="text-gray-500 mb-4 text-sm">
               Office Address: 123 Bamboo Lane, Craftsville, Philippines
             </p>
             <p className="text-gray-700 mb-4 text-sm">
-              We warmly invite you to visit us or explore our collection online. Our handcrafted
-              bamboo flutes are a perfect blend of tradition and artistry. Whether you're a
-              professional musician or a beginner, we have something for you!
+              We warmly invite you to visit us or explore our collection online.
+              Our handcrafted bamboo flutes are a perfect blend of tradition and
+              artistry. Whether you're a professional musician or a beginner, we
+              have something for you!
             </p>
             {/* <p className="text-gray-700 text-sm">
               Feel free to contact us or drop by our office. We’re excited to share the joy of
@@ -743,16 +758,22 @@ function App() {
       {/* Contact */}
       <section className="hidden py-12 bg-gray-50">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">Contact Us</h2>
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
+            Contact Us
+          </h2>
           <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12">
-            Have questions or feedback? We'd love to hear from you! Fill out the form below and we'll get back to you as soon as possible.
+            Have questions or feedback? We'd love to hear from you! Fill out the
+            form below and we'll get back to you as soon as possible.
           </p>
 
           <div className="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-md">
             <form>
               {/* Name Field */}
               <div className="mb-4">
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   Your Name
                 </label>
                 <input
@@ -766,7 +787,10 @@ function App() {
 
               {/* Email Field */}
               <div className="mb-4">
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   Your Email
                 </label>
                 <input
@@ -780,7 +804,10 @@ function App() {
 
               {/* Message Field */}
               <div className="mb-4">
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   Your Message
                 </label>
                 <textarea
@@ -813,15 +840,22 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Get in Touch */}
             <div class="text-center">
-              <h3 className="font-medium text-gray-700 mb-2 font-sans">Get in Touch</h3>
-              <a href="#contact" className="text-sm text-gray-600 hover:underline">
+              <h3 className="font-medium text-gray-700 mb-2 font-sans">
+                Get in Touch
+              </h3>
+              <a
+                href="#contact"
+                className="text-sm text-gray-600 hover:underline"
+              >
                 Contact Us
               </a>
             </div>
 
             {/* Customer Care */}
             <div class="text-center">
-              <h3 className="font-medium text-gray-700 mb-2 font-sans">Customer Care</h3>
+              <h3 className="font-medium text-gray-700 mb-2 font-sans">
+                Customer Care
+              </h3>
               <ul className="space-y-2 text-sm">
                 <li>
                   <a href="#" className="text-gray-600 hover:underline">
@@ -843,26 +877,45 @@ function App() {
 
             {/* Products */}
             <div class="text-center">
-              <h3 className="font-medium text-gray-700 mb-2 font-sans">Products</h3>
-              <a href="#products" className="text-gray-600 hover:underline text-sm">
+              <h3 className="font-medium text-gray-700 mb-2 font-sans">
+                Products
+              </h3>
+              <a
+                href="#products"
+                className="text-gray-600 hover:underline text-sm"
+              >
                 View All Flutes
               </a>
             </div>
 
             {/* Follow Us */}
             <div class="text-center">
-              <h3 className="font-medium text-gray-700 mb-4 font-sans">Follow Us</h3>
+              <h3 className="font-medium text-gray-700 mb-4 font-sans">
+                Follow Us
+              </h3>
               <div className="flex justify-center space-x-6">
-                <a href="#" className="text-gray-600 hover:text-gray-800 transition">
+                <a
+                  href="#"
+                  className="text-gray-600 hover:text-gray-800 transition"
+                >
                   <FaFacebookF className="text-xl" />
                 </a>
-                <a href="#" className="text-gray-600 hover:text-gray-800 transition">
+                <a
+                  href="#"
+                  className="text-gray-600 hover:text-gray-800 transition"
+                >
                   <FaTwitter className="text-xl" />
                 </a>
-                <a href="#" className="text-gray-600 hover:text-gray-800 transition">
+                <a
+                  href="#"
+                  className="text-gray-600 hover:text-gray-800 transition"
+                >
                   <FaInstagram className="text-xl" />
                 </a>
-                <a href="#" className="text-gray-600 hover:text-gray-800 transition">
+                <a
+                  href="#"
+                  className="text-gray-600 hover:text-gray-800 transition"
+                >
                   <FaTiktok className="text-xl" />
                 </a>
               </div>
@@ -874,8 +927,6 @@ function App() {
           </p>
         </div>
       </footer>
-
-
     </div>
   );
 }
