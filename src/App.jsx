@@ -714,7 +714,7 @@ function App() {
             {/* Office Photo */}
             <div className="">
               <img
-                src="/assets/activities/activity3.png"
+                src="/assets/company/company-craftsmen.png"
                 alt="Office"
                 className="w-full h-40 object-cover rounded-lg shadow"
               />
